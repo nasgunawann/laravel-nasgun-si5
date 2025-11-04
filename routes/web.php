@@ -25,3 +25,7 @@ Route::get('/produk', function () {
     ];
     return view('produk', compact('produk'));
 });
+
+Route::get('/produk/tambah', function () {
+    return view('tambah-produk');
+});

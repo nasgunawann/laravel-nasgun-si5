@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Produk</title>
+    <title>Tambah Produk</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
@@ -59,37 +59,38 @@
       
     <div class="container my-4">
       <div class="d-flex justify-content-between align-items-center">
-        <h1>Halaman Produk</h1>
-        <a href="/produk/tambah" class="btn btn-primary">Tambah Produk</a>
+        <h1>Form Tambah Produk</h1>
+        <button class="btn btn-primary">Tambah Produk</button>
       </div>
     </div>
 
-    <div class="container">
-    <div class="row">
-      <div class="col">
-          <table class="table table-primary table-striped">
-            <thead>
-                <tr>
-                  <th>Kode Produk</th>
-                  <th>Nama Produk</th>
-                  <th>Jenis Produk</th>
-                  <th>Harga</th>
-                </tr>
-            </thead>
-            <tbody>
-                @for ($i = 0; $i < count($produk); $i++)
-            <tr>
-                <td>{{ $produk[$i]['kode'] }}</td>
-                <td>{{ $produk[$i]['nama'] }}</td>
-                <td>{{ $produk[$i]['jenis'] }}</td>
-                <td>Rp {{ number_format($produk[$i]['harga'], 0, ',', '.') }}</td>
-            </tr>
-        @endfor
-            </tbody>
-          </table>
+    <div class="container mt-4">
+      <form>
+        <div class="row">
+          <div class="col-4">
+            <label class="form-label">Kode Produk</label>
+            <input type="text" placeholder="Input Kode Produk" class="form-control">
+          </div>
+          <div class="col-4">
+            <label class="form-label">Nama Produk</label>
+            <input type="text" class="form-control" placeholder="Input Nama Produk">
+          </div>
+          <div class="col-4">
+            <label class="form-label">Jenis Produk</label>
+            <select class="form-select">
+            </select>
+          </div>
+          <div class="col-8">
+            <label class="form-label">Harga</label>
+            <input type="number" class="form-control" placeholder="Input Harga">
+          </div>
+          <div class="col-4 d-grid align-self-end">
+            <button type="submit" class="btn btn-success">Simpan</button>
+          </div>
         </div>
-      </div>
+      </form>
     </div>
+    
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
