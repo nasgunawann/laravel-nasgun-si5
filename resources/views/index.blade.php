@@ -27,9 +27,35 @@
                 <a class="nav-link" href="/profile">Profile</a>
               </li>
             </ul>
+            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+              <span class="navbar-toggler-icon"></span>
+            </button>
           </div>
         </div>
       </nav>
+
+      <div class="offcanvas offcanvas-end" id="offcanvasExample">
+        <div class="offcanvas-header">
+          <h5>UTS Laravel</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="/">Produk</a>
+        </li>
+          </ul>
+          <div>
+        <form class="d-flex gap-2">
+          <input class="form-control" type="search" placeholder="Search">
+          <button class="btn btn-outline-success">Search</button>
+        </form>
+          </div>
+        </div>
+      </div>
 
       <div class="container mt-4">
         <h1>Ini adalah halaman Home</h1>
