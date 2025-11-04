@@ -78,6 +78,10 @@
           <div class="col-4">
             <label class="form-label">Jenis Produk</label>
             <select class="form-select">
+              <option disabled selected>Pilih Produk</option>
+              @for ($i = 0; $i < count($jenis_produk); $i++)
+              <option value="{{ strtolower($jenis_produk[$i]) }}">{{ $jenis_produk[$i] }}</option>
+            @endfor
             </select>
           </div>
           <div class="col-8">
