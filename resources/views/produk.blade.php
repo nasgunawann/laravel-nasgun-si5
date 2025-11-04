@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home</title>
+    <title>Produk</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
@@ -45,7 +45,7 @@
           <a class="nav-link active" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/produk">Produk</a>
+          <a class="nav-link disabled" href="/">Produk</a>
         </li>
           </ul>
           <div>
@@ -56,9 +56,39 @@
           </div>
         </div>
       </div>
+      
+    <div class="container my-4">
+      <div class="d-flex justify-content-between align-items-center">
+        <h1>Halaman Produk</h1>
+        <button class="btn btn-primary">Tambah Produk</button>
+      </div>
+    </div>
 
-      <div class="container mt-4">
-        <h1>Ini adalah halaman Home</h1>
+    <div class="container">
+    <div class="row">
+      <div class="col">
+          <table class="table table-primary table-striped">
+            <thead>
+                <tr>
+                  <th>Kode Produk</th>
+                  <th>Nama Produk</th>
+                  <th>Jenis Produk</th>
+                  <th>Harga</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for ($i = 0; $i < count($produk); $i++)
+            <tr>
+                <td>{{ $produk[$i]['kode'] }}</td>
+                <td>{{ $produk[$i]['nama'] }}</td>
+                <td>{{ $produk[$i]['jenis'] }}</td>
+                <td>Rp {{ number_format($produk[$i]['harga'], 0, ',', '.') }}</td>
+            </tr>
+        @endfor
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
