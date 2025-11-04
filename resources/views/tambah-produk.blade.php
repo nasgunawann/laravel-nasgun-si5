@@ -58,10 +58,7 @@
       </div>
       
     <div class="container my-4">
-      <div class="d-flex justify-content-between align-items-center">
         <h1>Form Tambah Produk</h1>
-        <button class="btn btn-primary">Tambah Produk</button>
-      </div>
     </div>
 
     <div class="container mt-4">
